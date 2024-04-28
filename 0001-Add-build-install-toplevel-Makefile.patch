@@ -1,0 +1,26 @@
+From c9e54d9929044eed7578ae163bbc000acb5ba506 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Sun, 28 Apr 2024 14:07:25 -0700
+Subject: [PATCH] Add build/install toplevel Makefile
+
+---
+ Makefile | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..5ed0f06
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,7 @@
++DESTDIR ?=
++
++all:
++	$(MAKE) -C src $(nproc)
++
++install:
++	install -D -p -m 0755 src/bpftool $(DESTDIR)/usr/bin/bpftool
+-- 
+2.44.0
+
