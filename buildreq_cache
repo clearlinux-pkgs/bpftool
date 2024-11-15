@@ -1,4 +1,3 @@
-7.4.0
+7.5.0
 elfutils-dev
 pkgconfig(libelf)
-pkgconfig(zlib)
